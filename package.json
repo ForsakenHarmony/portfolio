@@ -8,13 +8,17 @@
     "start": "node ./bin/www",
     "eslint": "eslint .",
     "build": "cross-env NODE_ENV=production npm run webpack",
+    "docker": "docker build -t harmony/portfolio .",
     "webpack": "webpack --progress --colors --config webpack.config.js",
     "webpack:watch": "webpack --progress --colors --config webpack.config.js --watch"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "cors": "^2.8.3",
     "debug": "^2.6.3",
     "express": "^4.15.2",
+    "helmet": "^3.5.0",
     "http-status": "^1.0.1",
     "morgan": "^1.8.1",
     "node-sass": "^4.5.2",

@@ -8,8 +8,8 @@ const app  = require('../src/app');
 const dbg  = require('debug');
 const http = require('http');
 
-// dbg.enable('ghost-app:*');
-const debug = dbg('ghost-app:server');
+// dbg.enable('portfolio:*');
+const debug = dbg('portfolio:server');
 
 /**
  * Get port from environment and store in Express.

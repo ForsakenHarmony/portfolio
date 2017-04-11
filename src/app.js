@@ -1,20 +1,29 @@
 'use strict';
 
-const express      = require('express');
-const path         = require('path');
-const favicon      = require('serve-favicon');
-const logger       = require('morgan');
-const bodyParser   = require('body-parser');
+const express    = require('express');
+const path       = require('path');
+const favicon    = require('serve-favicon');
+const logger     = require('morgan');
+const bodyParser = require('body-parser');
+const helmet     = require('helmet');
+const compress   = require('compression');
+const cors       = require('cors');
 
 const app = express();
+
+app.enable('trust proxy');
+
+// Enable CORS, security, compression, favicon and body parsing
+app.use(cors());
+app.use(helmet());
+app.use(compress());
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // view engine setup
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'pug');
-
-app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 if (app.get('env') === 'development') {
   require('./webpack')(app);
