@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "exclude": ["transform-regenerator", "transform-async-to-generator"],
+        "targets": {"browsers": ["last 2 versions"]}
+      }
+    ]
+  ],
+  "plugins": [
+    "fast-async",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    ["transform-react-jsx", {"pragma": "h"}]
+  ]
+}

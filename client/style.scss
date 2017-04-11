@@ -1,0 +1,46 @@
+* {
+  font-family: Roboto, serif;
+  color: #999;
+}
+
+body {
+  background: #0e1114;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #616;
+}
+
+
+.card {
+  display: inline-block;
+  border: 2px #616 solid;
+  padding: 20px;
+  margin: 2vh;
+}
+
+.half-width {
+  max-width: 50vw;
+}
+
+.block {
+  display: block;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+#appRoot {
+  min-height: 100vh;
+  > div {
+    padding: 5vw;
+  }
+}
