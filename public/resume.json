@@ -1,0 +1,82 @@
+{
+  "basics": {
+    "name": "Ashley",
+    "label": "",
+    "picture": "",
+    "email": "ulliftw@gmail.com",
+    "phone": "",
+    "website": "https://hrmny.pw",
+    "summary": "A summary of John Doe...",
+    "location": {
+      "countryCode": "DE",
+      "region": "Bayern"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "_f_harmony",
+        "url": "https://twitter.com/_f_harmony"
+      },
+      {
+        "network": "Github",
+        "username": "forsakenharmony",
+        "url": "https://github.com/forsakenharmony"
+      },
+      {
+        "network": "Keybase",
+        "username": "harmony",
+        "url": "https://keybase.io/harmony"
+      }
+    ]
+  },
+  "work": [],
+  "volunteer": [],
+  "education": [],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Advanced",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Node",
+        "MongoDB",
+        "RethinkDB"
+      ]
+    },
+    {
+      "name": "Sysadmin/Devops",
+      "level": "Intermediate",
+      "keywords": [
+        "Docker",
+        "Debian",
+        "Arch Linux"
+      ]
+    },
+    {
+      "name": "Game Development",
+      "level": "Beginner",
+      "keywords": [
+        "libgdx",
+        "Rust",
+        "Unity",
+        "Unreal Engine"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "German",
+      "level": "Native speaker"
+    },
+    {
+      "name": "English",
+      "level": "Advanced"
+    }
+  ],
+  "interests": [],
+  "references": []
+}

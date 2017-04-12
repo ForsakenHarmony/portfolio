@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 * {
-  font-family: Roboto, serif;
+  font-family: Roboto, sans-serif;
   color: #999;
 }
 
@@ -13,16 +15,21 @@ h1 {
   color: #616;
 }
 
-
 .card {
   display: inline-block;
   border: 2px #616 solid;
+  background-color: #1b2025;
   padding: 20px;
   margin: 2vh;
 }
 
+.container {
+  padding: 5vw;
+  max-width: 800px;
+}
+
 .half-width {
-  max-width: 50vw;
+  max-width: 50%;
 }
 
 .block {

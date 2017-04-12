@@ -1,5 +1,5 @@
 const Index = () => (
-  <div>
+  <div className="center container">
     <div className="card block half-width center">
       <h1>harmony</h1>
       <h3>( Ashley )</h3>
@@ -9,6 +9,7 @@ const Index = () => (
       <ul>
         <li>full stack web dev</li>
         <li>game dev</li>
+        <li>sysadmin</li>
         <li>idk</li>
       </ul>
     </div>

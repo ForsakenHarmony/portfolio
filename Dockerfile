@@ -8,7 +8,7 @@ RUN yarn install --no-cache --pure-lockfile
 COPY . ./
 
 ENV NODE_ENV production
-RUN yarn webpack
+RUN yarn build
 
 # Remove dev dependencies
 RUN yarn install --no-cache --pure-lockfile
