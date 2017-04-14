@@ -17,8 +17,8 @@ const contentSecurityPolicy = app.get('env') === 'development' ? false
   : {
     directives: {
       defaultSrc: ['\'self\''],
-      styleSrc  : ['\'self\'', 'fonts.googleapis.com'],
-      imgSrc    : ['\'self\'', 'twitter.com', 'pbs.twimg.com'],
+      styleSrc  : ['\'self\'', 'fonts.googleapis.com', 'fonts.gstatic.com'],
+      imgSrc    : ['\'self\'', 'twitter.com', 'mobile.twitter.com', 'pbs.twimg.com'],
     },
   };
 
