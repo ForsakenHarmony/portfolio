@@ -14,7 +14,13 @@ const app = express();
 app.enable('trust proxy');
 
 const contentSecurityPolicy = app.get('env') === 'development' ? false
-  : { directives: { defaultSrc: ['\'self\''] } };
+  : {
+    directives: {
+      defaultSrc: ['\'self\''],
+      styleSrc  : ['\'self\'', 'fonts.googleapis.com'],
+      imgSrc    : ['\'self\'', 'twitter.com', 'pbs.twimg.com'],
+    },
+  };
 
 // Enable CORS, security, compression, favicon and body parsing
 app.use(cors());
