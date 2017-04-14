@@ -1,3 +1,5 @@
+'use strict';
+
 import { render } from 'preact';
 
 import App from './router';

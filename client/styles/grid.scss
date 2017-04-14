@@ -1,0 +1,51 @@
+@import "~bourbon-neat/core/_neat";
+@import "mediaquery";
+
+$custom-grid: (
+  columns: 1,
+  gutter: 20px,
+);
+
+$custom-grid--tablet-up: (
+  columns: 5,
+  gutter: 20px,
+  media: "(min-width: 768px)",
+);
+
+$custom-grid--large-up: (
+  columns: 7,
+  gutter: 20px,
+  media: "(min-width: 1300px)",
+);
+
+.page {
+  @include grid-container;
+
+  @media only screen and (min-width: 1550px) {
+    padding: 0 10vw;
+  }
+}
+
+.sidebar {
+  @include grid-column(1, $custom-grid);
+
+  @include grid-media($custom-grid--tablet-up) {
+    @include grid-column(2);
+  }
+
+  @include grid-media($custom-grid--large-up) {
+    @include grid-column(2);
+  }
+}
+
+.main {
+  @include grid-column(1, $custom-grid);
+
+  @include grid-media($custom-grid--tablet-up) {
+    @include grid-column(3);
+  }
+
+  @include grid-media($custom-grid--large-up) {
+    @include grid-column(5);
+  }
+}

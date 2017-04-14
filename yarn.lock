@@ -838,6 +838,14 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bourbon-neat@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bourbon-neat/-/bourbon-neat-2.0.0.tgz#16079272c3941e767da041e75ee86cf4d5ab4c9e"
+
+bourbon@beta:
+  version "5.0.0-beta.7"
+  resolved "https://registry.yarnpkg.com/bourbon/-/bourbon-5.0.0-beta.7.tgz#e40140bf0b70d08f442cc40e9f6ae6f7d5c23069"
+
 brace-expansion@^1.0.0:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.7.tgz#3effc3c50e000531fb720eaff80f0ae8ef23cf59"
@@ -3107,6 +3115,10 @@ minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284"
 
+mitt@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/mitt/-/mitt-1.1.0.tgz#22f0d57e2fedd39620a62bb41b7cdd93667d3c41"
+
 mixin-object@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/mixin-object/-/mixin-object-2.0.1.tgz#4fb949441dab182540f1fe035ba60e1947a5e57e"
@@ -3299,6 +3311,10 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+normalize.css@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-6.0.0.tgz#22188c2707c911fb3ad3c1aac0677ff68661bea8"
 
 "npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.2:
   version "4.0.2"
@@ -3768,6 +3784,10 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
 preact-router@^2.4.4:
   version "2.4.4"
   resolved "https://registry.yarnpkg.com/preact-router/-/preact-router-2.4.4.tgz#7098a94be6d43c0c7e177ebf2a51ea5841fe9c2b"
+
+preact-smitty@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/preact-smitty/-/preact-smitty-1.0.3.tgz#192fb222b551e9453fa7e056e3beb9135f96bcc7"
 
 preact@^8.1.0:
   version "8.1.0"
@@ -4374,6 +4394,10 @@ slash@^1.0.0:
 slice-ansi@0.0.4:
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-0.0.4.tgz#edbf8903f66f7ce2f8eafd6ceed65e264c831b35"
+
+smitty@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/smitty/-/smitty-2.0.1.tgz#c580ef3ad94c427add924f25b00e61a2d707a38d"
 
 sntp@1.x.x:
   version "1.0.9"

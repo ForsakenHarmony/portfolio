@@ -13,7 +13,7 @@ const extractSass = new ExtractTextPlugin({
 });
 
 module.exports = {
-  devtool: ENV === 'production' ? 'source-map' : 'eval',
+  devtool: ENV === 'production' ? 'source-map' : 'cheap-eval-source-map',
   entry  : [
     './client/index.js',
     './client/style.scss',

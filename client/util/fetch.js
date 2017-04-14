@@ -1,3 +1,5 @@
+'use strict';
+
 import 'unfetch/polyfill';
 
 export const fetch = (method, path, body) => {

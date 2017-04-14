@@ -1,6 +1,14 @@
+@import "~bourbon/core/bourbon";
+@import "~bourbon-neat/core/neat";
+@import "~normalize.css/normalize.css";
+
+@import "styles/bitters/base";
+@import "styles/grid";
+@import "styles/icons";
+
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
+html {
   font-family: Roboto, sans-serif;
   color: #999;
 }
@@ -11,25 +19,39 @@ body {
   padding: 0;
 }
 
+a {
+  color: #ad48ff;
+}
+
 h1 {
   color: #616;
 }
 
+hr {
+  border-color: #616;
+}
+
+ul {
+  list-style: square;
+  padding: 0.5rem;
+  margin-left: 3vw;
+}
+
 .card {
-  display: inline-block;
   border: 2px #616 solid;
   background-color: #1b2025;
   padding: 20px;
-  margin: 2vh;
+  margin-bottom: 2vh;
+}
+
+button {
+  border: 2px #616 solid;
+  background-color: #1b2025;
 }
 
 .container {
   padding: 5vw;
   max-width: 800px;
-}
-
-.half-width {
-  max-width: 50%;
 }
 
 .block {

@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Portfolio",
+    "description": "My personal website. You are looking at it right now. Built with preact, smitty and sass",
+    "link": "https://github.com/ForsakenHarmony/portfolio"
+  },
+  {
+    "name": "codeoff-morse",
+    "description": "My solution to a coding challenge for resourceguru. CLI that can convert text to morse code and obfuscate it",
+    "link": "https://github.com/ForsakenHarmony/codeoff-morse"
+  }
+]
