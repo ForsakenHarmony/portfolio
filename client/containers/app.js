@@ -18,7 +18,7 @@ class App extends Component {
   
   render({ children }, {}, {}) {
     return (
-      <div>
+      <div className="container">
         {children}
       </div>
     );

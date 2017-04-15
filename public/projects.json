@@ -1,12 +1,20 @@
 [
   {
     "name": "Portfolio",
-    "description": "My personal website. You are looking at it right now. Built with preact, smitty and sass",
+    "description": "My personal website. You are looking at it right now. Pulls personal data and the list of projects from a JSON file",
+    "tags": ["node", "webpack", "preact", "sass"],
     "link": "https://github.com/ForsakenHarmony/portfolio"
+  },
+  {
+    "name": "GameProt",
+    "description": "A concept for a split screen space shooter. it's based on my first ever game, but rewritten with libgdx",
+    "tags": ["kotlin", "libgdx"],
+    "link": "https://github.com/ForsakenHarmony/GameProt"
   },
   {
     "name": "codeoff-morse",
     "description": "My solution to a coding challenge for resourceguru. CLI that can convert text to morse code and obfuscate it",
+    "tags": ["node"],
     "link": "https://github.com/ForsakenHarmony/codeoff-morse"
   }
 ]

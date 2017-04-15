@@ -1,3 +1,6 @@
+@import "../modules/all";
+@import "base";
+
 html {
   color: $base-font-color;
   font-family: $base-font-family;
@@ -15,6 +18,10 @@ h6 {
   font-size: modular-scale(1);
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
+}
+
+h1 {
+  color: $purple;
 }
 
 p {

@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  background: $base-background-color;
+  margin: 0;
+  padding: 0;
+}
+
+#appRoot {
+  min-height: 100vh;
+}
+
+.container {
+  padding: 5vw;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}

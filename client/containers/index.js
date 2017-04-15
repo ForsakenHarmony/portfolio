@@ -1,16 +1,50 @@
 'use strict';
 
 import { Component } from 'preact';
+import Router from 'preact-router';
 import { connect } from 'preact-smitty';
+
+import Projects from '../components/projects';
+import About from '../components/about';
 
 @connect(state => state)
 class Index extends Component {
-  render({ resume, projects }, {}, {}) {
+  state = {
+    display: 'projects',
+  };
+  
+  switchTo = (state) => {
+    this.setState({ display: state });
+  };
+  
+  render({ resume, projects }, { display }, {}) {
     if (resume === null) {
       return (
         <div className="center card">loading...</div>
       );
     }
+    
+    const about = (
+      <div className="card">
+        <h2>About me</h2>
+        <p> {resume.basics.summary} </p>
+        <ul>
+          {resume.skills.map(e => (
+            <li>
+              <p className="center-text"><strong>{e.name}</strong></p>
+              <p className="center-text">
+                (
+                <small>{e.level}</small>
+                )
+              </p>
+            </li>
+          ))}
+        </ul>
+        <button className="center block" onClick={this.switchTo.bind(null, 'about')}>
+          more..
+        </button>
+      </div>
+    );
     
     return (
       <div className="page">
@@ -31,30 +65,16 @@ class Index extends Component {
               </p>
             ))}
           </div>
-          <div className="card">
-            <h2>About me</h2>
-            <p> {resume.basics.summary} </p>
-            <ul>
-              {resume.skills.map(e => (
-                <li>{e.name}</li>
-              ))}
-            </ul>
-            <button className="center block">more..</button>
-          </div>
+          {about}
         </div>
         <div className="main">
           <div>
-            <hr/>
-            <h1>Projects</h1>
-            <hr/>
+            <button onClick={this.switchTo.bind(null, 'projects')}>Projects</button>
+            <button onClick={this.switchTo.bind(null, 'about')}>About Me</button>
+            <a className="button" href="/404" onClick={Router.route.bind(null, 404)}>404?</a>
           </div>
-          {projects.map(p => (
-            <div className="card">
-              <h2>{p.name}</h2>
-              <p>{p.description}</p>
-              <a href={p.link}><i className="fa-github"></i>Github</a>
-            </div>
-          ))}
+          {display === 'projects' && <Projects projects={projects}/>}
+          {display === 'about' && <About resume={resume}/>}
         </div>
       </div>
     );

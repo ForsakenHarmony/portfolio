@@ -1,5 +1,5 @@
-@import "~bourbon-neat/core/_neat";
-@import "mediaquery";
+@import "base";
+@import "../modules/all";
 
 $custom-grid: (
   columns: 1,

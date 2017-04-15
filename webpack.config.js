@@ -16,7 +16,7 @@ module.exports = {
   devtool: ENV === 'production' ? 'source-map' : 'cheap-eval-source-map',
   entry  : [
     './client/index.js',
-    './client/style.scss',
+    './client/styles/main.scss',
   ],
   output : {
     path      : path.join(__dirname, 'public'),

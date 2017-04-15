@@ -9,6 +9,8 @@ const helmet     = require('helmet');
 const compress   = require('compression');
 const cors       = require('cors');
 
+const request = require('request');
+
 const app = express();
 
 app.enable('trust proxy');
@@ -17,8 +19,8 @@ const contentSecurityPolicy = app.get('env') === 'development' ? false
   : {
     directives: {
       defaultSrc: ['\'self\''],
-      styleSrc  : ['\'self\'', 'fonts.googleapis.com', 'fonts.gstatic.com'],
-      imgSrc    : ['\'self\'', 'twitter.com', 'mobile.twitter.com', 'pbs.twimg.com'],
+      styleSrc  : ['\'self\'', 'fonts.googleapis.com'],
+      fontSrc   : ['\'self\'', 'fonts.gstatic.com'],
     },
   };
 
@@ -43,6 +45,12 @@ if (app.get('env') === 'development') {
 
 app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.png')));
 app.use('/assets', express.static(path.resolve(__dirname, '..', 'public')));
+
+app.get('/me.png', (req, res) => {
+  const url = 'https://twitter.com/_f_harmony/profile_image?size=original';
+  req.pipe(request(url), { end: true })
+     .pipe(res, { end: true });
+});
 
 app.use('/', (req, res, next) => {
   if (!req.accepts('html') || req.url.includes('/assets')) {

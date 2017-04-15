@@ -29,6 +29,7 @@
     "preact-router": "^2.4.4",
     "preact-smitty": "^1.0.3",
     "pug": "^2.0.0-beta11",
+    "request": "^2.81.0",
     "serve-favicon": "^2.4.2",
     "smitty": "^2.0.1",
     "unfetch": "^2.1.2"

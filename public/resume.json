@@ -2,11 +2,11 @@
   "basics": {
     "name": "Ashley",
     "label": "",
-    "picture": "https://twitter.com/_f_harmony/profile_image?size=original",
+    "picture": "/me.png",
     "email": "ulliftw@gmail.com",
     "phone": "",
     "website": "https://hrmny.pw",
-    "summary": "A weird developer from Germany",
+    "summary": "Fullstack dev from Germany, not a big fan of capitalism, but we have to live with it for now",
     "location": {
       "countryCode": "DE",
       "region": "Bayern"
