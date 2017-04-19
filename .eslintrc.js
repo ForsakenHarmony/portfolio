@@ -18,7 +18,7 @@ module.exports = {
   'settings': {
     'react': {
       'pragma' : 'preact',
-      'version': '7.1.0'
+      'version': '8.1.0'
     }
   },
   'rules'   : {

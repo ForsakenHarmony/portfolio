@@ -14,10 +14,23 @@ const Projects = ({ projects }) => (
 );
 
 const Project = ({ project }) => (
-  <article className="card">
-    <h2>{project.name}</h2>
-    <p>{project.description}</p>
-    <a href={project.link}><i className="fa-github"></i>Github</a>
+  <article className="card no-padding">
+    <div className="header">
+      <div className="title">
+        <h2>{project.name}</h2>
+      </div>
+      <a href={project.link} className="action">
+        <i className="fa-github"></i>
+      </a>
+    </div>
+    <div className="content">
+      <p>{project.description}</p>
+      <div>
+        {project.tags.map(t => (
+          <span className="badge">{t}</span>
+        ))}
+      </div>
+    </div>
   </article>
 );
 

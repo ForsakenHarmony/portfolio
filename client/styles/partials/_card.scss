@@ -1,8 +1,37 @@
 @import "../modules/all";
 
 .card {
-  border: 2px solid $purple;
+  border: $base-border;
+  border-radius: $base-border-radius;
   background-color: $secondary-background-color;
+  box-shadow: $card-shadow;
   padding: 20px;
   margin-bottom: 2vh;
+  overflow: hidden;
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  .header {
+    display: flex;
+
+    .title {
+      flex: 1;
+      padding: 20px;
+      background-color: darken($secondary-background-color, 5);
+    }
+
+    .action {
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: lighten($secondary-background-color, 5);
+    }
+  }
+
+  .content {
+    padding: 20px;
+  }
 }

@@ -3,8 +3,8 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: "Roboto";
-$heading-font-family: "Roboto";
+$base-font-family: "Varela Round";
+$heading-font-family: "Varela Round";
 
 // Font Sizes
 $base-font-size: 1em;
@@ -14,7 +14,7 @@ $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 0;
+$base-border-radius: 6px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
@@ -28,19 +28,32 @@ $purple: #751eff;
 $pink: #6500FF;
 
 $gray: #1b2025;
-$dark: #0e1114;
+$dark: #423E63;
+$dark-purple: #410339;
+
+$palette: (
+  #410339, #8E3D84,
+  #F3CDEE, #E295D8,
+  #BF72B6, #A6559E
+);
 
 // Font Colors
-$base-font-color: $light-gray;
-$action-color: $medium-gray;
+$base-font-color: nth($palette, 3);
+$action-color: nth($palette, 4);
 
 // Border
-$base-border-color: $purple;
-$base-border: 1px solid $base-border-color;
+$base-border-color: nth($palette, 2);
+$base-border: 2px solid $base-border-color;
+$base-border: 0px;
 
 // Background Colors
 $base-background-color: $dark;
-$secondary-background-color: $gray;
+$secondary-background-color: nth($palette, 1);
+
+$base-background: radial-gradient(circle, $dark-purple 0%, #000 100%);
+
+// Shadows
+$card-shadow: 0 0 40px rgba(0,0,0,0.5);
 
 // Animations
 $base-duration: 150ms;

@@ -4,10 +4,12 @@
 $small-font-size: 0.75em;
 
 .badge {
-  background-color: $purple;
-  color: lighten($base-font-color, 50%);
+  background-color: $secondary-background-color;
+  border-radius: 5px;
+  color: $base-font-color;
   display: inline-block;
   font-size: $small-font-size;
+  box-shadow: $card-shadow;
   line-height: 1;
   padding: 0.4em 1.2em;
   margin: 0.4em;

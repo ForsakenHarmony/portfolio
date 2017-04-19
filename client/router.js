@@ -14,6 +14,7 @@ const Page = () => (
     <App>
       <Router>
         <Index path="/"/>
+        <Index me path="/me"/>
         <NotFound default path="/404"/>
       </Router>
     </App>

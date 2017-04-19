@@ -1,3 +1,6 @@
+@import "../modules/all";
+@import "base";
+
 html {
   box-sizing: border-box;
 }
@@ -10,7 +13,7 @@ html {
 
 html,
 body {
-  background: $base-background-color;
+  @include prefixer(background-image, $base-background, ("webkit"));
   margin: 0;
   padding: 0;
 }
@@ -26,6 +29,10 @@ body {
 .center {
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .center-text {

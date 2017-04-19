@@ -30,13 +30,19 @@ const About = ({ resume }) => (
 );
 
 const Skill = ({ skill }) => (
-  <article className="card">
-    <h2>{skill.name}</h2>
-    <p>{skill.level}</p>
-    <div>
-      {skill.keywords.map(k => (
-        <span className="badge">{k}</span>
-      ))}
+  <article className="card no-padding">
+    <div className="header">
+      <div className="title">
+        <h2>{skill.name}</h2>
+      </div>
+    </div>
+    <div className="content">
+      <p>{skill.level}</p>
+      <div>
+        {skill.keywords.map(k => (
+          <span className="badge">{k}</span>
+        ))}
+      </div>
     </div>
   </article>
 );

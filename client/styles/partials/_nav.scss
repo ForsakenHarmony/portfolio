@@ -1,0 +1,41 @@
+@import "../modules/all";
+@import "base";
+
+.nav {
+  display: flex;
+}
+
+.nav-item {
+  padding: $small-spacing $base-spacing;
+  position: relative;
+  flex: 1;
+  text-align: center;
+  transition: all $base-duration $base-timing;
+
+  &.active {
+    &::before {
+      transform: scaleX(1);
+      box-shadow: 0 0 5px;
+    }
+  }
+
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      background-color: shade($action-color, 25%);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 1px;
+    left: $base-spacing;
+    width: calc(100% - 3em);
+    height: 1px;
+    background-color: $action-color;
+    content: '';
+    transition: all $base-duration $base-timing;
+    transform: scaleX(0);
+    box-shadow: 0 0 0;
+  }
+}

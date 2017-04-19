@@ -1,7 +1,6 @@
 'use strict';
 
 import { Component } from 'preact';
-import Router from 'preact-router';
 import { connect } from 'preact-smitty';
 
 import Projects from '../components/projects';
@@ -17,32 +16,40 @@ class Index extends Component {
     this.setState({ display: state });
   };
   
-  render({ resume, projects }, { display }, {}) {
+  render({ resume, projects, me }, {}, {}) {
     if (resume === null) {
       return (
         <div className="center card">loading...</div>
       );
     }
     
+    const display = me ? 'about' : 'projects';
+    
     const about = (
-      <div className="card">
-        <h2>About me</h2>
-        <p> {resume.basics.summary} </p>
-        <ul>
-          {resume.skills.map(e => (
-            <li>
-              <p className="center-text"><strong>{e.name}</strong></p>
-              <p className="center-text">
-                (
-                <small>{e.level}</small>
-                )
-              </p>
-            </li>
-          ))}
-        </ul>
-        <button className="center block" onClick={this.switchTo.bind(null, 'about')}>
-          more..
-        </button>
+      <div className="card no-padding">
+        <div className="header">
+          <div className="title">
+            <h2>About me</h2>
+          </div>
+        </div>
+        <div className="content">
+          <p> {resume.basics.summary} </p>
+          <ul>
+            {resume.skills.map(e => (
+              <li>
+                <p className="center-text"><strong>{e.name}</strong></p>
+                <p className="center-text">
+                  (
+                  <small>{e.level}</small>
+                  )
+                </p>
+              </li>
+            ))}
+          </ul>
+          <button className="center block" onClick={this.switchTo.bind(null, 'about')}>
+            more..
+          </button>
+        </div>
       </div>
     );
     
@@ -50,28 +57,36 @@ class Index extends Component {
       <div className="page">
         <div className="sidebar">
           <div className="card">
-            <img className="center block" src={resume.basics.picture} alt="ok"/>
+            <img className="center block"
+                 src={resume.basics.picture}
+                 alt="ok"
+                 style={{ borderRadius: '5px' }}/>
           </div>
-          <div className="card">
-            <h1>harmony</h1>
-            <h3>( {resume.basics.name} )</h3>
-            <hr/>
-            {resume.basics.profiles.map(p => (
-              <p>
-                <a href={p.url}>
-                  <i className={`fa-${p.network.toLowerCase()}`}></i>
-                  {p.username}
-                </a>
-              </p>
-            ))}
+          <div className="card no-padding">
+            <div className="header">
+              <div className="title">
+                <h1>harmony</h1>
+                <h3>( {resume.basics.name} )</h3>
+              </div>
+            </div>
+            <div className="content">
+              {resume.basics.profiles.map(p => (
+                <p>
+                  <a href={p.url}>
+                    <i className={`fa-${p.network.toLowerCase()}`}></i>
+                    {p.network} - {p.username}
+                  </a>
+                </p>
+              ))}
+            </div>
           </div>
           {about}
         </div>
         <div className="main">
-          <div>
-            <button onClick={this.switchTo.bind(null, 'projects')}>Projects</button>
-            <button onClick={this.switchTo.bind(null, 'about')}>About Me</button>
-            <a className="button" href="/404" onClick={Router.route.bind(null, 404)}>404?</a>
+          <div className="nav">
+            <a className={`nav-item ${!me && 'active'}`} href="/">Projects</a>
+            <a className={`nav-item ${me && 'active'}`} href="/me">About Me</a>
+            <a className="nav-item" href="/404">404?</a>
           </div>
           {display === 'projects' && <Projects projects={projects}/>}
           {display === 'about' && <About resume={resume}/>}
