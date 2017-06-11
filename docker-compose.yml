@@ -10,7 +10,7 @@ services:
       - "traefik.frontend.rule=Host:hrmny.pw"
       - "traefik.port=3000"
     volumes:
-      - /data/portfolio:/public
+      - /data/portfolio:/usr/src/app/public
 
 networks:
   web:

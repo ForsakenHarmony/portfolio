@@ -3,9 +3,7 @@
 const Projects = ({ projects }) => (
   <section>
     <div>
-      <hr/>
       <h1>Projects</h1>
-      <hr/>
     </div>
     {projects.map(p => (
       <Project project={p}/>

@@ -1,9 +1,7 @@
 const About = ({ resume }) => (
   <section>
     <div>
-      <hr/>
       <h1>About Me</h1>
-      <hr/>
     </div>
     <div className="card">
       <h3>{resume.basics.name}</h3>

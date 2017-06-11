@@ -21,6 +21,7 @@ const contentSecurityPolicy = app.get('env') === 'development' ? false
       defaultSrc: ['\'self\''],
       styleSrc  : ['\'self\'', 'fonts.googleapis.com'],
       fontSrc   : ['\'self\'', 'fonts.gstatic.com'],
+      imgSrc    : ['\'self\'', 'http.cat'],
     },
   };
 
@@ -47,9 +48,8 @@ app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.png')));
 app.use('/assets', express.static(path.resolve(__dirname, '..', 'public')));
 
 app.get('/me.png', (req, res) => {
-  const url = 'https://twitter.com/_f_harmony/profile_image?size=original';
-  req.pipe(request(url), { end: true })
-     .pipe(res, { end: true });
+  const url = 'https://twitter.com/hrmny_/profile_image?size=original';
+  request(url).pipe(res, { end: true });
 });
 
 app.use('/', (req, res, next) => {

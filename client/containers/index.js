@@ -83,11 +83,6 @@ class Index extends Component {
           {about}
         </div>
         <div className="main">
-          <div className="nav">
-            <a className={`nav-item ${!me && 'active'}`} href="/">Projects</a>
-            <a className={`nav-item ${me && 'active'}`} href="/me">About Me</a>
-            <a className="nav-item" href="/404">404?</a>
-          </div>
           {display === 'projects' && <Projects projects={projects}/>}
           {display === 'about' && <About resume={resume}/>}
         </div>

@@ -3,6 +3,8 @@
 
 .nav {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-item {
@@ -11,11 +13,12 @@
   flex: 1;
   text-align: center;
   transition: all $base-duration $base-timing;
+  max-width: 150px;
 
   &.active {
     &::before {
       transform: scaleX(1);
-      box-shadow: 0 0 5px;
+      box-shadow: 0 23px 20px 3px;
     }
   }
 
