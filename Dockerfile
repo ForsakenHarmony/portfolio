@@ -4,12 +4,12 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY package.json package-lock.json ./
-RUN npm i
+RUN yarn
 COPY . ./
 
 ENV NODE_ENV production
-RUN npm run build
+RUN yarn build
 
 EXPOSE 3000
 
-CMD [ "npm", "run" ,"start" ]
+CMD [ "yarn" ,"start" ]
