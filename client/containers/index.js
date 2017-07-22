@@ -11,20 +11,20 @@ class Index extends Component {
   state = {
     display: 'projects',
   };
-  
+
   switchTo = (state) => {
     this.setState({ display: state });
   };
-  
+
   render({ resume, projects, me }, {}, {}) {
     if (resume === null) {
       return (
         <div className="center card">loading...</div>
       );
     }
-    
+
     const display = me ? 'about' : 'projects';
-    
+
     const about = (
       <div className="card no-padding">
         <div className="header">
@@ -52,15 +52,16 @@ class Index extends Component {
         </div>
       </div>
     );
-    
+
     return (
       <div className="page">
         <div className="sidebar">
           <div className="card">
-            <img className="center block"
-                 src={resume.basics.picture}
-                 alt="ok"
-                 style={{ borderRadius: '5px' }}/>
+            <img
+              className="center block"
+              src={resume.basics.picture}
+              alt="ok"
+              style={{ borderRadius: '5px' }}/>
           </div>
           <div className="card no-padding">
             <div className="header">

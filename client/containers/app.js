@@ -9,10 +9,10 @@ import { get } from '../util/fetch';
 @connect(state => ({ url: state.url }))
 class App extends Component {
   componentWillMount() {
-    get('/assets/resume.json')
+    get('/resume.json')
       .then(result => result.json())
       .then(resume => this.props.actions.set({ resume }));
-    get('/assets/projects.json')
+    get('/projects.json')
       .then(result => result.json())
       .then(projects => this.props.actions.set({ projects }));
   }

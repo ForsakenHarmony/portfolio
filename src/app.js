@@ -45,7 +45,7 @@ if (app.get('env') === 'development') {
 }
 
 app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.png')));
-app.use('/assets', express.static(path.resolve(__dirname, '..', 'public')));
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
 
 app.get('/me.png', (req, res) => {
   const url = 'https://twitter.com/hrmny_/profile_image?size=original';
@@ -53,7 +53,7 @@ app.get('/me.png', (req, res) => {
 });
 
 app.use('/', (req, res, next) => {
-  if (!req.accepts('html') || req.url.includes('/assets')) {
+  if (!req.accepts('html') || req.url.includes('.')) {
     return next();
   }
   res.render('index', { title: '~ harmony ~' });

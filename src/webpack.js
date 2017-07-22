@@ -17,7 +17,7 @@ module.exports = function webpackMiddleware(app) {
   
   const compiler = webpack(config);
   
-  const devMiddleware = dev(compiler, { noInfo: true, publicPath: '/assets/' });
+  const devMiddleware = dev(compiler, { noInfo: true, publicPath: '/' });
   const hotMiddleware = hot(compiler);
   
   app.use(devMiddleware);
