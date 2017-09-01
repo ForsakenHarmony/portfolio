@@ -1,15 +1,29 @@
-FROM top20/node:8-alpine
+FROM top20/node:8-alpine AS builder
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package.json yarn.lock ./
-RUN yarn
-COPY . ./
+COPY package.json package-lock.json /app
+# Creating tar of productions dependencies
+RUN npm install --production && cp -rp ./node_modules /tmp/node_modules
+# Installing all dependencies
+RUN npm install
+
+COPY . /app
 
 ENV NODE_ENV production
-RUN yarn build
+RUN npm run build
 
+FROM top20/node:8-alpine AS runner
+
+WORKDIR /app
+ENV NODE_ENV production
 EXPOSE 3000
 
-CMD [ "yarn" ,"start" ]
+# Adding production dependencies to image
+COPY --from=builder /tmp/node_modules /app/node_modules
+
+COPY . /app
+# copy build
+COPY --from=builder /app/public /app/public
+
+CMD [ "node" ,"./bin/www" ]

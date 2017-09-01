@@ -1,5 +1,3 @@
-'use strict';
-
 import { Component } from 'preact';
 import { connect } from 'preact-smitty';
 import { Link } from 'preact-router';
@@ -9,10 +7,10 @@ import { get } from '../util/fetch';
 @connect(state => ({ url: state.url }))
 class App extends Component {
   componentWillMount() {
-    get('/resume.json')
+    get('/data/resume.json')
       .then(result => result.json())
       .then(resume => this.props.actions.set({ resume }));
-    get('/projects.json')
+    get('/data/projects.json')
       .then(result => result.json())
       .then(projects => this.props.actions.set({ projects }));
   }

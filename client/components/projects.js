@@ -1,5 +1,3 @@
-'use strict';
-
 const Projects = ({ projects }) => (
   <section>
     <div>

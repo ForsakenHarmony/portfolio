@@ -1,5 +1,3 @@
-'use strict';
-
 import { Component } from 'preact';
 import { connect } from 'preact-smitty';
 

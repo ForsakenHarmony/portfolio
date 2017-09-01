@@ -1,5 +1,3 @@
-'use strict';
-
 const NotFound = () => (
   <div className="center center-text">
     <h1>404</h1>

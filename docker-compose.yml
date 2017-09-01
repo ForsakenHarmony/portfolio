@@ -3,6 +3,7 @@ version: '2'
 services:
   app:
     image: harmony/portfolio
+    build: .
     networks:
       - web
     labels:
@@ -10,7 +11,7 @@ services:
       - "traefik.frontend.rule=Host:hrmny.pw"
       - "traefik.port=3000"
     volumes:
-      - /data/portfolio:/usr/src/app/public
+      - /data/portfolio:/app/public/data
 
 networks:
   web:

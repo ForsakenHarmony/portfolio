@@ -1,6 +1,6 @@
-'use strict';
-
 import { render } from 'preact';
+
+import './styles/main.scss';
 
 import App from './router';
 

@@ -16,7 +16,6 @@ module.exports = {
   devtool: ENV === 'production' ? 'source-map' : 'cheap-eval-source-map',
   entry  : [
     './client/index.js',
-    './client/styles/main.scss',
   ],
   output : {
     path      : path.join(__dirname, 'public'),
@@ -25,15 +24,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    // currently don't have anything that needs it
-    // alias     : {
-    //   react      : 'preact-compat',yar
-    //   'react-dom': 'preact-compat',
-    // },
-    modules   : [
-      path.join(__dirname, './client/'),
-      path.join(__dirname, 'node_modules'),
-    ],
   },
   module : {
     rules: [
