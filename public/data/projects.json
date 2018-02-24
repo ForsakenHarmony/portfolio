@@ -1,5 +1,12 @@
 [
   {
+    "name": "parket",
+    "description": "A library to manage application state, heavily inspired by mobx-state-tree",
+    "images": [],
+    "tags": ["preact", "react", "mobx"],
+    "link": "https://github.com/ForsakenHarmony/parket"
+  },
+  {
     "name": "Portfolio",
     "description": "My personal website. You are looking at it right now. Pulls personal data and the list of projects from a JSON file",
     "images": [],

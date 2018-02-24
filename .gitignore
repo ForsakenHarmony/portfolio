@@ -30,5 +30,5 @@ node_modules
 
 .idea/
 
-public/bundle.js
-public/style.css
+public
+!public/data

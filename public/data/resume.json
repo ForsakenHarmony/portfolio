@@ -1,15 +1,15 @@
 {
   "basics": {
-    "name": "Ashley",
+    "name": "Leah",
     "label": "",
     "picture": "/me.png",
-    "email": "ulliftw@gmail.com",
+    "email": "me@hrmny.pw",
     "phone": "",
     "website": "https://hrmny.pw",
     "summary": "Fullstack dev from Germany, not a big fan of capitalism, but we have to live with it for now",
     "location": {
       "countryCode": "DE",
-      "region": "Bayern"
+      "region": "Bavaria"
     },
     "profiles": [
       {
@@ -74,7 +74,7 @@
     },
     {
       "name": "English",
-      "level": "Advanced"
+      "level": "Fluent"
     }
   ],
   "interests": [],
