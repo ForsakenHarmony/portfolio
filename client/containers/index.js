@@ -6,14 +6,6 @@ import About from '../components/about';
 
 @connect(state => state)
 class Index extends Component {
-  state = {
-    display: 'projects',
-  };
-
-  switchTo = (state) => {
-    this.setState({ display: state });
-  };
-
   render({ resume, projects, me }, {}, {}) {
     if (resume === null) {
       return (
@@ -37,16 +29,11 @@ class Index extends Component {
               <li>
                 <p className="center-text"><strong>{e.name}</strong></p>
                 <p className="center-text">
-                  (
-                  <small>{e.level}</small>
-                  )
+                  (<small>{e.level}</small>)
                 </p>
               </li>
             ))}
           </ul>
-          <button className="center block" onClick={this.switchTo.bind(null, 'about')}>
-            more..
-          </button>
         </div>
       </div>
     );
